@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.preference.SwitchPreferenceCompat
+        android:defaultValue="false"
+        android:key="enable_debug"
+        android:summary="@string/enable_dbg_summary"
+        android:title="@string/enable_dbg" />
+    <EditTextPreference
+        android:id="@+id/email_pref"
+        android:defaultValue="@string/default_email_pref"
+        android:key="email_address"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:imeOptions="actionDone"
+        android:summary="@string/email_pref_summary"
+        android:inputType="text"
+        android:title="@string/email_pref" />
+    <EditTextPreference
+        android:defaultValue="@string/server_pref_default"
+        android:key="backend_uri"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:summary="@string/backend_pref_summary"
+        android:title="@string/backend_pref" />
+</PreferenceScreen>

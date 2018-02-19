@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">My Mushaf</string>
+    <string name="btn_search">Pencarian</string>
+    <string name="btn_report">Melaporkan</string>
+    <string name="btn_verify">Pengesahan Mushaf</string>
+    <string name="enable_dbg">Enable Debug Mode</string>
+    <string name="enable_dbg_summary">Enable Developer Settings</string>
+    <string name="email_pref">Email Address</string>
+    <string name="email_pref_summary">Reports will be sent to this address</string>
+    <string name="failed_intent">Error starting activity</string>
+    <string name="settings">Settings</string>
+    <string name="server_pref_default">https://api.tasmuq.com/</string>
+    <string name="backend_pref">Server Address</string>
+    <string name="default_email_pref">mail@domain.com</string>
+    <string name="backend_pref_summary">Tasmuq backend server address</string>
+    <string name="title_activity_reporting">ReportingActivity</string>
+    <string name="reportingTitle">Lodge Report</string>
+    <string name="btn_Send">Hantar</string>
+    <string name="mainTitle">Mobile Mushaf</string>
+    <string name="title_activity_user_search">Pencarian</string>
+    <string name="img_desc">Mushaf Image</string>
+    <string name="no_data_error">No Data Available</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="title_activity_detail">Mushaf Details</string>
+    <string name="mushaf_detail">Mushaf Details</string>
+    <string name="mushaf_verse">Verse Details</string>
+</resources>
