@@ -1,8 +1,9 @@
 package com.hafizjef.tasmuq.model;
 
-import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
 
 public class DetailResponse {
 
@@ -15,6 +16,9 @@ public class DetailResponse {
     @SerializedName("overlapList")
     @Expose
     private List<String> overlapList = null;
+    @SerializedName("result")
+    @Expose
+    private Result result;
 
     public String getUuid() {
         return uuid;
@@ -38,6 +42,14 @@ public class DetailResponse {
 
     public void setOverlapList(List<String> overlapList) {
         this.overlapList = overlapList;
+    }
+
+    public Result getResult() {
+        return result;
+    }
+
+    public void setResult(Result result) {
+        this.result = result;
     }
 
 }

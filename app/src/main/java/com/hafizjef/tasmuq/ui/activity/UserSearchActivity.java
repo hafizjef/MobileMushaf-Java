@@ -1,5 +1,6 @@
 package com.hafizjef.tasmuq.ui.activity;
 
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,7 +18,6 @@ import android.widget.TextView;
 import com.hafizjef.tasmuq.R;
 import com.hafizjef.tasmuq.adapters.MushafAdapter;
 import com.hafizjef.tasmuq.data.ApiProvider;
-import com.hafizjef.tasmuq.data.RetrofitProvider;
 import com.hafizjef.tasmuq.data.MushafApiService;
 import com.hafizjef.tasmuq.model.MushafResponse;
 import com.hafizjef.tasmuq.utils.AndroidUtils;
@@ -87,6 +87,7 @@ public class UserSearchActivity extends AppCompatActivity {
         return true;
     }
 
+    @SuppressLint("CheckResult")
     private void loadData() {
         try {
             noData.setVisibility(View.GONE);

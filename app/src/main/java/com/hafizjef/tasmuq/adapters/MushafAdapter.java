@@ -50,7 +50,7 @@ public class MushafAdapter extends RecyclerView.Adapter<MushafAdapter.ViewHolder
 
         try {
             Glide.with(context)
-                    .load(serverURL + "files/data/frame/text/" + imageModel.getMFile().getPath())
+                    .load(serverURL + "files/frame/text/" + imageModel.getMFile().getPath())
                     .into(holder.imageView);
         } catch (Exception err) {
             Log.d(TAG, err.getMessage());
@@ -58,9 +58,14 @@ public class MushafAdapter extends RecyclerView.Adapter<MushafAdapter.ViewHolder
 
         holder.constraintLayout.setOnClickListener((View v) -> {
 
-            Intent intent = new Intent(AndroidUtils.getAppContext(), DetailActivity.class);
-            intent.putExtra(Constants.UUID_EXTRA, imageModel.getUuid());
-            AndroidUtils.getAppContext().startActivity(intent);
+            if (holder.status.getText().equals("COMPLETE")) {
+                Intent intent = new Intent(AndroidUtils.getAppContext(), DetailActivity.class);
+                intent.putExtra(Constants.UUID_EXTRA, imageModel.getUuid());
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                AndroidUtils.getAppContext().startActivity(intent);
+            } else {
+                AndroidUtils.showToast("Detailed Data Not Available");
+            }
 
         });
     }

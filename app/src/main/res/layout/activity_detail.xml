@@ -24,6 +24,56 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+        <TextView
+            android:id="@+id/txtNamaFail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/loadPlaceholder"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/lblNamaFail"
+            app:layout_constraintTop_toTopOf="@+id/lblNamaFail" />
+
+        <TextView
+            android:id="@+id/txtMukasurat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/loadPlaceholder"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/lblMukaSurat"
+            app:layout_constraintTop_toTopOf="@+id/lblMukaSurat" />
+
+        <TextView
+            android:id="@+id/txtTahunSah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/loadPlaceholder"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/lblTahunDisah"
+            app:layout_constraintTop_toTopOf="@+id/lblTahunDisah" />
+
+        <TextView
+            android:id="@+id/txtPenyalin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/phPenyalin"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/lblPenyalin"
+            app:layout_constraintTop_toTopOf="@+id/lblPenyalin" />
+
+        <TextView
+            android:id="@+id/txtTahunPenerbit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/loadPlaceholder"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/lblTahunPenerbit"
+            app:layout_constraintTop_toTopOf="@+id/lblTahunPenerbit" />
+
         <android.support.constraint.Guideline
             android:id="@+id/guidelineMid"
             android:layout_width="match_parent"
@@ -33,34 +83,134 @@
 
         <android.support.v4.view.ViewPager
             android:id="@+id/viewPager"
-            android:layout_width="368dp"
-            android:layout_height="189dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@+id/guidelineMid"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/lblMushafDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:text="@string/mushaf_detail"
             android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/viewPager"
-            tools:text="Mushaf Details"
-            android:text="@string/mushaf_detail" />
+            app:layout_constraintTop_toTopOf="@+id/guidelineMid"
+            tools:text="Mushaf Details" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/lblPenerbit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="@string/mushaf_verse"
+            android:text="@string/lblPenerbit"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/lblMushafDetail" />
+
+        <TextView
+            android:id="@+id/lblNegara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/lblNegara"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblPenerbit" />
+
+        <TextView
+            android:id="@+id/lblVersi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/lblVersi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblNegara" />
+
+        <TextView
+            android:id="@+id/lblTahunPenerbit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/lblTahunPenerbit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblVersi" />
+
+        <TextView
+            android:id="@+id/lblPenyalin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/lblPenyalin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblTahunPenerbit" />
+
+        <TextView
+            android:id="@+id/lblTahunDisah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/lblTahunDisah"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblPenyalin" />
+
+        <TextView
+            android:id="@+id/lblMukaSurat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/lblMukaSurat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblTahunDisah" />
+
+        <TextView
+            android:id="@+id/lblNamaFail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/lblNamaFail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblMukaSurat" />
+
+        <TextView
+            android:id="@+id/txtPenerbit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/loadPlaceholder"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/lblPenerbit"
+            app:layout_constraintTop_toTopOf="@+id/lblPenerbit" />
+
+        <TextView
+            android:id="@+id/txtVersi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/loadPlaceholder"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/lblVersi"
+            app:layout_constraintTop_toTopOf="@+id/lblVersi" />
+
+        <TextView
+            android:id="@+id/txtNegara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/loadPlaceholder"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/lblNegara"
+            app:layout_constraintTop_toTopOf="@+id/lblNegara" />
 
     </android.support.constraint.ConstraintLayout>
 
